@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{82FB6845-1E27-4086-99B1-D84DD8AA24F3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArchiveBookings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArchiveBookings.Designer.cs">
+      <DependentUpon>ArchiveBookings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArchiveClient.Designer.cs">
+      <DependentUpon>ArchiveClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveDJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArchiveDJ.Designer.cs">
+      <DependentUpon>ArchiveDJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArchiveEvent.Designer.cs">
+      <DependentUpon>ArchiveEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArchiveGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArchiveGenre.Designer.cs">
+      <DependentUpon>ArchiveGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Booking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Booking.Designer.cs">
+      <DependentUpon>Booking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookingDjReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookingDjReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BookingNotifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingNotifications.Designer.cs">
+      <DependentUpon>BookingNotifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookingsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingsReport.Designer.cs">
+      <DependentUpon>BookingsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client.Designer.cs">
+      <DependentUpon>Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmBooking.Designer.cs">
+      <DependentUpon>ConfirmBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmDJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmDJ.Designer.cs">
+      <DependentUpon>ConfirmDJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DJ.Designer.cs">
+      <DependentUpon>DJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DJ2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DJ2.Designer.cs">
+      <DependentUpon>DJ2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Events.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Events.Designer.cs">
+      <DependentUpon>Events.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="G12Report.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>G12Report.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="G12Wst2024DataSet.cs">
+      <DependentUpon>G12Wst2024DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="G12Wst2024DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>G12Wst2024DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="G12Wst2024DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>G12Wst2024DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="G12Wst2024DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>G12Wst2024DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="G12Wst2024DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>G12Wst2024DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="G12Wst2024DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>G12Wst2024DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="G12Wst2024DataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>G12Wst2024DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Genre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genre.Designer.cs">
+      <DependentUpon>Genre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Look.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Look.Designer.cs">
+      <DependentUpon>Look.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Review.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Review.Designer.cs">
+      <DependentUpon>Review.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schedule.Designer.cs">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search.Designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff.Designer.cs">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TotalAmount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TotalAmount.Designer.cs">
+      <DependentUpon>TotalAmount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateClient.Designer.cs">
+      <DependentUpon>UpdateClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateDJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateDJ.Designer.cs">
+      <DependentUpon>UpdateDJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewbookings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewbookings.Designer.cs">
+      <DependentUpon>viewbookings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewClients.Designer.cs">
+      <DependentUpon>ViewClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewDJ.Designer.cs">
+      <DependentUpon>ViewDJ.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ArchiveBookings.resx">
+      <DependentUpon>ArchiveBookings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArchiveClient.resx">
+      <DependentUpon>ArchiveClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArchiveDJ.resx">
+      <DependentUpon>ArchiveDJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArchiveEvent.resx">
+      <DependentUpon>ArchiveEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArchiveGenre.resx">
+      <DependentUpon>ArchiveGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Booking.resx">
+      <DependentUpon>Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingDjReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BookingDjReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingNotifications.resx">
+      <DependentUpon>BookingNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingsReport.resx">
+      <DependentUpon>BookingsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client.resx">
+      <DependentUpon>Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmBooking.resx">
+      <DependentUpon>ConfirmBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmDJ.resx">
+      <DependentUpon>ConfirmDJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DJ.resx">
+      <DependentUpon>DJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DJ2.resx">
+      <DependentUpon>DJ2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Events.resx">
+      <DependentUpon>Events.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genre.resx">
+      <DependentUpon>Genre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Look.resx">
+      <DependentUpon>Look.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Review.resx">
+      <DependentUpon>Review.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Schedule.resx">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff.resx">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TotalAmount.resx">
+      <DependentUpon>TotalAmount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateClient.resx">
+      <DependentUpon>UpdateClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateDJ.resx">
+      <DependentUpon>UpdateDJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewbookings.resx">
+      <DependentUpon>viewbookings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewClients.resx">
+      <DependentUpon>ViewClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewDJ.resx">
+      <DependentUpon>ViewDJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="G12Report.xsc">
+      <DependentUpon>G12Report.xsd</DependentUpon>
+    </None>
+    <None Include="G12Report.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>G12Report.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="G12Report.xss">
+      <DependentUpon>G12Report.xsd</DependentUpon>
+    </None>
+    <None Include="G12Wst2024DataSet.xsc">
+      <DependentUpon>G12Wst2024DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="G12Wst2024DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>G12Wst2024DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="G12Wst2024DataSet.xss">
+      <DependentUpon>G12Wst2024DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="G12Wst2024DataSet1.xsc">
+      <DependentUpon>G12Wst2024DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="G12Wst2024DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>G12Wst2024DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="G12Wst2024DataSet1.xss">
+      <DependentUpon>G12Wst2024DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="G12Wst2024DataSet2.xsc">
+      <DependentUpon>G12Wst2024DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="G12Wst2024DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>G12Wst2024DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="G12Wst2024DataSet2.xss">
+      <DependentUpon>G12Wst2024DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="G12Wst2024DataSet3.xsc">
+      <DependentUpon>G12Wst2024DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="G12Wst2024DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>G12Wst2024DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="G12Wst2024DataSet3.xss">
+      <DependentUpon>G12Wst2024DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="G12Wst2024DataSet4.xsc">
+      <DependentUpon>G12Wst2024DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="G12Wst2024DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>G12Wst2024DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="G12Wst2024DataSet4.xss">
+      <DependentUpon>G12Wst2024DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="G12Wst2024DataSet5.xsc">
+      <DependentUpon>G12Wst2024DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="G12Wst2024DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>G12Wst2024DataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="G12Wst2024DataSet5.xss">
+      <DependentUpon>G12Wst2024DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2024-05-19 at 14.13.22_0f4d60ed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GROOVE HUB.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
